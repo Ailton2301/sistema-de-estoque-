@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Principal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bem-vindo!</h1>
+    {% if profile == 'admin' %}
+        <a href="{{ url_for('cadastrar_usuario') }}">Cadastrar Usuário</a>
+    {% endif %}
+    <a href="{{ url_for('cadastrar_produto') }}">Cadastrar Produto</a>
+    <a href="{{ url_for('visualizar_produtos') }}">Visualizar Produtos</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
